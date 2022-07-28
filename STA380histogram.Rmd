@@ -1,0 +1,44 @@
+---
+title: "STA380 histogram"
+output: md_document
+date: "2022-07-28"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r}
+#https://www.econometrics-with-r.org/2-1-random-variables-and-probability-distributions.html
+curve(dnorm(x),
+      xlim = c(-3.5, 3.5),
+      ylab = "Density", 
+      main = "Standard Normal Density Function") 
+```
+
+```{r}
+#https://www.math.csi.cuny.edu/Statistics/R/simpleR/stat007.html
+x=rnorm(100)
+hist(x,probability=TRUE,col=gray(.9),main="normal mu=0,sigma=1")
+curve(dnorm(x),add=T)
+```
